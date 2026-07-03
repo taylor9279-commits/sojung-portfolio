@@ -22,7 +22,9 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;height:auto}
+  h1,h2,h3,h4,p,li,span{overflow-wrap:break-word;word-break:keep-all}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
   section{padding:84px 0}
   section.wrap{padding:84px 24px}  /* section+wrap 동시 적용 시 세로 여백 유지 */
@@ -129,17 +131,37 @@
   footer{background:var(--navy);color:rgba(255,255,255,.5);text-align:center;padding:26px;font-size:13px}
 
   @media(max-width:820px){
-    .hero-grid{grid-template-columns:1fr;gap:36px}
-    .hero-photo{max-width:300px;aspect-ratio:4/5;margin:0 auto}
+    .hero{padding:76px 0 64px}
+    .hero-grid{grid-template-columns:1fr;gap:32px}
+    .hero-photo{max-width:280px;aspect-ratio:4/5;margin:0 auto}
+    .hero::after{font-size:220px;right:-30px;top:20px}
     section.wrap{padding:60px 24px}
     .ach-grid{grid-template-columns:1fr}
     .stats-grid{grid-template-columns:repeat(2,1fr)}
     .stat{border-bottom:1px solid rgba(255,255,255,.1)}
+    .stat:nth-child(2n){border-right:none}
+    .stat:last-child{grid-column:1 / -1}
     .proj ul{grid-template-columns:1fr}
     .proj.with-img{grid-template-columns:1fr}
-    .proj.with-img .photo{min-height:240px}
+    .proj.with-img .photo{min-height:220px}
+    .proj.with-img .body{padding:28px}
     .skills-grid{grid-template-columns:1fr}
+    .contact a.mail{overflow-wrap:anywhere}
     section{padding:60px 0}
+  }
+  @media(max-width:480px){
+    .hero{padding:56px 0 48px}
+    .hero-photo{max-width:230px}
+    section.wrap{padding:48px 20px}
+    .wrap{padding:0 20px}
+    .ach{padding:24px}
+    .proj{padding:24px}
+    .proj.with-img .body{padding:22px}
+    .brand-chip{padding:22px 16px}
+    .certs summary{padding:16px 20px;font-size:15px}
+    .certs .cert-list{padding:2px 20px 20px}
+    .contact a.mail{font-size:20px}
+    footer{padding:22px 16px}
   }
 </style>
 </head>
