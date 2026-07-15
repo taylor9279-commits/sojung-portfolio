@@ -118,6 +118,10 @@
   .proj li::before{content:"✦";position:absolute;left:0;color:var(--red);font-size:10px;top:4px}
   .proj .result{margin-top:14px;padding:12px 16px;background:var(--paper);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;font-size:14px;line-height:1.5}
   .proj .result b{color:var(--navy)}
+  .proj-gallery{padding:0;overflow:hidden}
+  .proj-gallery .gallery{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+  .proj-gallery .g-photo{background-size:cover;background-position:center;min-height:250px}
+  .proj-gallery .body{padding:26px 28px}
 
   /* ===== SKILLS ===== */
   .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -296,6 +300,24 @@
   <div class="eyebrow">Key Projects</div>
   <h2 class="title">주요 프로젝트</h2>
   <p class="lead">기획부터 실행까지 주도한 대표 마케팅 프로젝트입니다.</p>
+
+  <div class="proj proj-gallery">
+    <div class="gallery">
+      <div class="g-photo" style="background-image:url('images/culture-table-1.jpg')" role="img" aria-label="산펠레그리노 컬처 테이블 — 브랜드 프레젠테이션 현장"></div>
+      <div class="g-photo" style="background-image:url('images/culture-table-2.jpg')" role="img" aria-label="파브리치오 페라리 셰프 4핸즈 콜라보 런치 준비"></div>
+    </div>
+    <div class="body">
+      <div class="head"><h3>S.Pellegrino Culture Table</h3><span class="yr">2026.06</span></div>
+      <div class="sub">글로벌 ‘Dinner Dialogues’ 캠페인을 한국에 맞게 선보인 첫 오프라인 행사 · TAK</div>
+      <ul>
+        <li>크리에이터 런치 + 셰프스 나이트 2부 구성 기획·운영</li>
+        <li>파브리치오 페라리×오준탁 셰프 ‘한식×이탈리아’ 4핸즈 콜라보 런치</li>
+        <li>Dinner Dialogues 특별 에디션 보틀로 대화형 브랜드 경험 설계</li>
+        <li>미쉐린·아시아 50 베스트 셰프 커뮤니티 네트워킹</li>
+      </ul>
+      <div class="result">📈 <b>참석 75명 · 소셜 256건·약 1,340만 노출 · 언론 5건</b> 확보. 파브리치오 페라리 셰프의 브랜드 앰버서더 협업 논의로 이어짐.</div>
+    </div>
+  </div>
 
   <div class="proj with-img">
     <div class="photo" style="background-image:url('images/popup-life-is-juicier.jpg')" role="img" aria-label="Life is Juicier 팝업스토어 현장 — 산펠레그리노 칵테일 바"></div>
